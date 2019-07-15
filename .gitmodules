@@ -1,0 +1,6 @@
+[submodule "snippets/yasnippet"]
+	path = snippets/yasnippet
+	url = https://github.com/joaotavora/yasnippet
+[submodule "themes/zenburn"]
+	path = themes/zenburn
+	url = https://github.com/bbatsov/zenburn-emacs
