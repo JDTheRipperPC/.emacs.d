@@ -3,11 +3,11 @@
 
 ;; Garbage collection
 
-(defvar new-gc-cons-threshold 33554432
+(defvar new-gc-cons-threshold 33554432        ; 32MB
   "The default value to use for 'gc-cons-threshold'. If you experience freezing,
 decrease this. If you experience stuttering, increase this.")
 
-(defvar new-gc-cons-upper-limit 1073741824
+(defvar new-gc-cons-upper-limit 1073741824    ; 1GB
   "The temporary value for 'gc-cons-threshold' to defer it.")
 
 (defvar file-name-handler-alist-copy file-name-handler-alist
@@ -33,7 +33,7 @@ decrease this. If you experience stuttering, increase this.")
 
 ;; 
 
-(defvar emacs-user-dir (file-name-directory load-file-name)
+(defvar user-emacs-dir (file-name-directory load-file-name)
   "Absolute path of the .emacs.d directory.")
 
 (add-to-list 'custom-theme-load-path (concat user-emacs-dir "themes/zenburn"))
