@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: def __gt__(self, other):
+# key: gt
+# --
+def __gt__(self, other):
+    return ${1:self > other}

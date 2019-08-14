@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: def __ne__(self, other):
+# key: ne
+# --
+def __ne__(self, other):
+    return ${1:self != other}

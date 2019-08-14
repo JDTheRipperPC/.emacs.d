@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: def __lt__(self, other):
+# key: lt
+# --
+def __lt__(self, other):
+    return ${1:self < other}
