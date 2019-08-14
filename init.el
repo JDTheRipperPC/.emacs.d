@@ -1,5 +1,11 @@
 ;;; init.el
 
+;; Minimal configuration in every emacs instance.
+;; Improve garbage collection and load a default theme.
+;; Any other configuration must be defered and only loaded if --run-ide
+;; command line options is used.
+;; Alternatively, alias emacs-ide=emacs --run-ide
+
 
 ;; Garbage collection
 
@@ -30,8 +36,10 @@ decrease this. If you experience stuttering, increase this.")
   (setq file-name-handler-alist nil)
   (add-hook 'after-init-hook #'restore-startup-optimizations))
 
+;; Garbage collection ends here
 
-;; 
+
+;; Load theme
 
 (defvar user-emacs-dir (file-name-directory load-file-name)
   "Absolute path of the .emacs.d directory.")
@@ -39,8 +47,12 @@ decrease this. If you experience stuttering, increase this.")
 (add-to-list 'custom-theme-load-path (concat user-emacs-dir "themes/zenburn"))
 (load-theme 'zenburn t)
 
-;; TODO: Defere it
-(add-to-list 'load-path (concat user-emacs-dir "snippets/yasnippet"))
-(require 'yasnippet)
-(yas-reload-all)
-(add-hook 'python-mode-hook #'yas-minor-mode)
+;; Load theme ends here
+
+
+(defun emacs-run-ide (switch)
+  (add-to-list 'load-path (concat user-emacs-dir "core"))
+  (require 'core-yasnippet)
+  )  ; emacs-run-ide ends here
+
+(add-to-list 'command-switch-alist '("--run-ide" . emacs-run-ide))
