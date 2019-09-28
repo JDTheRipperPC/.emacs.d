@@ -38,6 +38,9 @@ decrease this. If you experience stuttering, increase this.")
 
 ;; Garbage collection ends here
 
+(defun close-all-buffers ()
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
 
 ;; Load theme
 
