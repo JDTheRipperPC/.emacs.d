@@ -56,6 +56,13 @@ decrease this. If you experience stuttering, increase this.")
 (defun emacs-run-ide (switch)
   (add-to-list 'load-path (concat user-emacs-dir "core"))
   (require 'core-yasnippet)
+
+  ;; load php-mode
+  (add-to-list 'load-path (concat user-emacs-dir "major-modes/php-mode"))
+  (require 'php-mode)
+  ;; (when (file-directory-p (concat user-emacs-dir "major-modes/php-mode"))
+  ;;   (load (concat user-emacs-dir "major-modes/php-mode/php-mode-autoloads.el")))
+
   )  ; emacs-run-ide ends here
 
 (add-to-list 'command-switch-alist '("--run-ide" . emacs-run-ide))

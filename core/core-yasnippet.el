@@ -13,6 +13,7 @@
 (yas-reload-all)
 
 (add-hook 'python-mode-hook #'yas-minor-mode)
+(add-hook 'html-mode-hook #'yas-minor-mode)
 
 (provide 'core-yasnippet)
 
