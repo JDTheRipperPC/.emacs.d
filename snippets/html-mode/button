@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: <button>
+# key: button
+# --
+<button${1: id="$2"}${3: name="$4"}${5: type="$6"}>$0</button>
