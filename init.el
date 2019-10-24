@@ -63,6 +63,10 @@ decrease this. If you experience stuttering, increase this.")
   ;; (when (file-directory-p (concat user-emacs-dir "major-modes/php-mode"))
   ;;   (load (concat user-emacs-dir "major-modes/php-mode/php-mode-autoloads.el")))
 
+  (add-to-list 'load-path (concat user-emacs-dir "IDE/neotree"))
+  (require 'neotree)
+  (global-set-key [f8] 'neotree-toggle)
+
   )  ; emacs-run-ide ends here
 
 (add-to-list 'command-switch-alist '("--run-ide" . emacs-run-ide))
