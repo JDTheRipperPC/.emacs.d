@@ -60,8 +60,15 @@ decrease this. If you experience stuttering, increase this.")
   ;; load php-mode
   (add-to-list 'load-path (concat user-emacs-dir "major-modes/php-mode"))
   (require 'php-mode)
-  ;; (when (file-directory-p (concat user-emacs-dir "major-modes/php-mode"))
-  ;;   (load (concat user-emacs-dir "major-modes/php-mode/php-mode-autoloads.el")))
+
+  ;; load web-mode
+  (add-to-list 'load-path (concat user-emacs-dir "major-modes/web-mode"))
+  (require 'web-mode)
+
+  (add-to-list 'load-path (concat user-emacs-dir "utils/memoize"))
+
+  (add-to-list 'load-path (concat user-emacs-dir "IDE/all-the-icons.el"))
+  (require 'all-the-icons)
 
   (setq inhibit-startup-message t)
   (setq default-directory "~/Projects/")
@@ -69,6 +76,8 @@ decrease this. If you experience stuttering, increase this.")
   (add-to-list 'load-path (concat user-emacs-dir "IDE/neotree"))
   (require 'neotree)
   (global-set-key [f8] 'neotree-toggle)
+  ; (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-theme 'arrow)
 
   )  ; emacs-run-ide ends here
 
