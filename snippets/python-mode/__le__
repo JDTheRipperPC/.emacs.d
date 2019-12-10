@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: def __le__(self, other):
-# key: le
-# --
-def __le__(self, other):
-    return ${1:self <= other}

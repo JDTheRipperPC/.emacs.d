@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: <base>
-# key: base
-# --
-<base target="${1:_self|_blank|_parent|_top}" href="$2" />

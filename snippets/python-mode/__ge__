@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: def __ge__(self, other):
-# key: ge
-# --
-def __ge__(self, other):
-    return ${1:self >= other}

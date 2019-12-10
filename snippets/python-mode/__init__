@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: def __init__(self, *args, **kwargs):
-# key: init
-# --
-def __init__(self, ${1:*args, **kwargs}):
-    ${2:pass}

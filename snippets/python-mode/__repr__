@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: def __repr__(self):
-# key: repr
-# --
-def __repr__(self):
-    return ${1:''}
